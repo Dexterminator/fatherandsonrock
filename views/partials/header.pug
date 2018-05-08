@@ -1,0 +1,10 @@
+mixin main-header(active)
+
+  mixin item(title, url)
+    a(href=url, class=active == title && 'active')= title
+
+  .header-content
+    +item("Home", "/")
+    a(href="/")
+      img.band-logo(src="images/logo.png")
+    +item("Gallery", "/gallery")

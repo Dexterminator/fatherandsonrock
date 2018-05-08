@@ -1,0 +1,16 @@
+{
+  "name": "fatherandsonrock",
+  "version": "1.0.0",
+  "repository": "git@github.com:Dexterminator/fatherandsonrock.git",
+  "author": "Dexter Gramfors <dexter.gramfors@gmail.com>",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "nib": "^1.1.2"
+  }
+}
