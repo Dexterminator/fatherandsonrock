@@ -2,24 +2,32 @@
 
 color-background = #282828
 color-black-transparent = rgba(0, 0, 0, 0.5)
+content-width-screen-small = 85%
+content-width-screen-large = 50%
+screen-large = 1200px
 
 body
   font-family sans-serif
-  font-size 1.3rem
-  background-color color-background
   color white
   min-height 100vh
   padding 0
   margin 0
-  background url(../images/background.jpg)
-  background-size cover
+  background-image url(../images/background.jpg)
+  background-position top 4rem left
+  background-size contain
+  background-repeat no-repeat
+  background-color color-background
+
+  @media(min-width: 730px)
+    background-position initial
+    background-size cover
+    font-size 1.2rem
 
 header
   display flex
-  height 13rem
+  height 8rem
   justify-content center
   align-items center
-  font-size 2.5rem
   background-color color-black-transparent
 
   a
@@ -31,41 +39,43 @@ header
 
   .header-content
     display flex
-    justify-content space-around
+    justify-content space-between
     text-align center
-    width 90%
+    width content-width-screen-small
 
   .band-logo
-    height 10rem
+    height 5rem
     align-self center
+
+  @media(min-width: screen-large)
+    height 12rem
+    font-size 1.9rem
+
+    .header-content
+      display flex
+      width content-width-screen-large
+
+    .band-logo
+      height 10rem
+
 
 main
   width 100%
   margin-left auto
   margin-right auto
+  margin-bottom 2rem
 
 a
   color white
 
-.background-image
-  width 100%
-  position absolute
-  margin-left auto
-  margin-right auto
-  top -4rem
-  left 0
-  right 0
-  z-index -1
-
 .band-description
-  width 50%
+  width content-width-screen-small
   margin-left auto
   margin-right auto
   margin-top 3rem
 
-.intro-text
-  font-size 1.2rem
-  margin-bottom 1rem
+  @media(min-width: screen-large)
+    width content-width-screen-large
 
 .contact
   margin-top 3rem
