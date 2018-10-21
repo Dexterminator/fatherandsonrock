@@ -3,7 +3,8 @@ extends partials/layout
 mixin video(title, url)
   div.video
     h2= title
-    iframe(width="560", height="315", src=url, frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
+    div.video-iframe-wrapper
+      iframe(src=url, frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
 
 block header
   +main-header('Video')
