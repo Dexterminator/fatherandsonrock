@@ -1,0 +1,17 @@
+extends partials/layout
+
+mixin publication-quote(text, publication)
+  blockquote
+    p.quote= text
+    div= publication
+
+block header
+  +main-header('Press')
+
+block content
+  div.content
+    h2 Quotes
+
+    +publication-quote("“…a quality leap toward the international market with this powerful and interesting album.”", "Rockaxis")
+    +publication-quote("“…a great musical flow, that is mesmerizing…”", "Sweden Rock Magazine")
+    +publication-quote("“As you understand, this is a very wide and dynamic album.”", "Artrock.se")
