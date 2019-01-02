@@ -14,12 +14,11 @@ mixin main-header(active)
   nav.header-content
     .link-collection
       +item("About", "/")
-      +item("Albums", "/albums")
       +item("Black Circle", "/black-circle")
+      +item("Video", "/video")
     a(href="/")
       img.band-logo(src="images/logo.png")
     .link-collection
-      +item("Video", "/video")
       +item("Press", "/press")
       +brand-icon("spotify", "https://open.spotify.com/artist/7d1pdBgOSmlO8kP4E0w8Ug?si=-i3xhs4dRrqXFBcYfTXQXQ")
       +brand-icon("itunes-note", "https://geo.itunes.apple.com/us/album/unholy-ghost/973252595?mt=1&app=music")
