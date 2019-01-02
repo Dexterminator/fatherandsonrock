@@ -1,4 +1,5 @@
 @import 'nib'
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Staatliches');
 
 color-background = #282828
 color-black-transparent = rgba(0, 0, 0, 0.5)
@@ -6,8 +7,12 @@ content-width-screen-small = 85%
 content-width-screen-large = 50%
 screen-large = 1200px
 
+h2
+  font-weight normal
+  font-family 'Staatliches', sans-serif
+
 body
-  font-family sans-serif
+  font-family 'Noto Sans', sans-serif
   color white
   min-height 100vh
   padding 0
@@ -32,38 +37,39 @@ header
 
   a
     text-decoration none
-    align-self center
+    &:hover
+      color darkgrey
 
   .active
-    text-decoration underline
+    color darkgrey
 
   .header-content
+    font-family 'Staatliches', sans-serif
     display flex
     justify-content space-between
     align-items center
     text-align center
     width content-width-screen-small
+    font-size 2.5vw
 
   .link-collection
     display flex
     justify-content space-between
     width 35%
 
-  .icon-link:hover
-      color grey
-
   .band-logo
     height 5rem
 
   @media(min-width: screen-large)
-    height 12rem
+    height 11vw
 
     .header-content
       display flex
       width content-width-screen-large
+      font-size 1.5vw
 
     .band-logo
-      height 10rem
+      height 9vw
 
 
 main
@@ -83,6 +89,10 @@ a
 
   @media(min-width: screen-large)
     width content-width-screen-large
+
+.leader-text
+  font-family 'Staatliches', cursive
+  font-size 3.5em
 
 .album-cover-image
   display block
