@@ -1,5 +1,18 @@
 doctype html
 include header
+
+mixin side-menu()
+  #side-menu
+    +item("About", "/")
+    +item("Black Circle", "/black-circle")
+    +item("Video", "/video")
+    +item("Press", "/press")
+    div
+      +brand-icon("spotify", "https://open.spotify.com/artist/7d1pdBgOSmlO8kP4E0w8Ug?si=-i3xhs4dRrqXFBcYfTXQXQ")
+      +brand-icon("itunes-note", "https://geo.itunes.apple.com/us/album/unholy-ghost/973252595?mt=1&app=music")
+      +brand-icon("facebook", "https://www.facebook.com/fatherandsonswe/")
+      +icon("shopping-bag", "https://super8.merchants.se/en/super-8/fonogram/")
+
 html
   head
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -7,9 +20,11 @@ html
     link(rel='stylesheet' href='css/style.css')
     link(rel='shortcut icon' href='images/favicon.ico')
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous")
+    script(src='js/bundle.min.js')
 
   body
     header
       block header
     main
+      +side-menu
       block content

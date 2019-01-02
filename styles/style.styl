@@ -5,6 +5,7 @@ color-background = #282828
 color-black-transparent = rgba(0, 0, 0, 0.5)
 content-width-screen-small = 85%
 content-width-screen-large = 50%
+screen-medium = 600px
 screen-large = 1200px
 
 h2
@@ -28,37 +29,90 @@ body
     background-size cover
     font-size 1.2rem
 
+#side-menu
+  display flex
+  flex-direction column
+  padding 1rem
+  top 5rem
+  position absolute
+  width 80%
+  height 100vh
+  background-color #4d4d4d
+  z-index 1
+  transition transform 0.3s ease
+  transform translateX(-100%)
+
+  .menu-item
+    font-size 2em
+
+  .icon-link
+    margin-right 1em
+    font-size 1.5em
+
+  &.open
+    transform translateX(0)
+
+  @media(min-width: screen-medium)
+    display none
+
+a
+  text-decoration none
+  &:hover
+    color darkgrey
+
+.menu-item
+  font-family 'Staatliches', sans-serif
+
+.active
+  color #7f7f7f
+
 header
   display flex
-  height 8rem
+  height 5rem
   justify-content center
   align-items center
   background-color color-black-transparent
+  font-size 2rem
 
-  a
-    text-decoration none
+  button.hamburger
+    background none
+    padding none
+    outline none
+    color white
+    border none
+    font-size inherit
+
     &:hover
       color darkgrey
-
-  .active
-    color darkgrey
+      cursor pointer
 
   .header-content
-    font-family 'Staatliches', sans-serif
     display flex
     justify-content space-between
     align-items center
     text-align center
     width content-width-screen-small
-    font-size 2.5vw
 
   .link-collection
-    display flex
-    justify-content space-between
-    width 35%
+    display none
 
   .band-logo
-    height 5rem
+    height 3rem
+
+  @media(min-width: screen-medium)
+    height 8rem
+    font-size 2.5vw
+
+    button.hamburger
+      display none
+
+    .link-collection
+      display flex
+      justify-content space-between
+      width 35%
+
+    .band-logo
+      height 5rem
 
   @media(min-width: screen-large)
     height 11vw
@@ -92,7 +146,7 @@ a
 
 .leader-text
   font-family 'Staatliches', cursive
-  font-size 3.5em
+  font-size 2.5em
 
 .album-cover-image
   display block
