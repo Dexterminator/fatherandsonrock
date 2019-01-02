@@ -40,12 +40,20 @@ header
   .header-content
     display flex
     justify-content space-between
+    align-items center
     text-align center
     width content-width-screen-small
 
+  .link-collection
+    display flex
+    justify-content space-between
+    width 35%
+
+  .icon-link:hover
+      color grey
+
   .band-logo
     height 5rem
-    align-self center
 
   @media(min-width: screen-large)
     height 12rem
@@ -75,9 +83,6 @@ a
 
   @media(min-width: screen-large)
     width content-width-screen-large
-
-.montage-image
-  width 100%
 
 .album-cover-image
   display block

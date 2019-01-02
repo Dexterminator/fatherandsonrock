@@ -3,15 +3,25 @@ mixin main-header(active)
   mixin item(title, url)
     a(href=url, class=active == title && 'active')= title
 
-  mixin icon(name)
-    i(class="fas fa-" + name)
+  mixin icon(name, url)
+    a.icon-link(href=url target="_blank")
+      i(class="fas fa-" + name)
 
-  .header-content
-    +item("About", "/")
-    +item("Albums", "/albums")
-    +item("Black Circle", "/black-circle")
+  mixin brand-icon(name, url)
+    a.icon-link(href=url target="_blank")
+      i(class="fab fa-" + name)
+
+  nav.header-content
+    .link-collection
+      +item("About", "/")
+      +item("Albums", "/albums")
+      +item("Black Circle", "/black-circle")
     a(href="/")
       img.band-logo(src="images/logo.png")
-    +item("Video", "/video")
-    +item("Press", "/press")
-    a(href="https://super8.merchants.se/en/super-8/fonogram/" target="_blank") Shop
+    .link-collection
+      +item("Video", "/video")
+      +item("Press", "/press")
+      +brand-icon("spotify", "https://open.spotify.com/artist/7d1pdBgOSmlO8kP4E0w8Ug?si=-i3xhs4dRrqXFBcYfTXQXQ")
+      +brand-icon("itunes-note", "https://geo.itunes.apple.com/us/album/unholy-ghost/973252595?mt=1&app=music")
+      +brand-icon("facebook", "https://www.facebook.com/fatherandsonswe/")
+      +icon("shopping-bag", "https://super8.merchants.se/en/super-8/fonogram/")
